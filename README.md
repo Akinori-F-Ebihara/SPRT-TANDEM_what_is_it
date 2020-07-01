@@ -42,10 +42,14 @@ Let's start with a toy example to get the hang of the SPRT.
 </div>
 
 You have two coins, but one of them is a skewed coin that has uneven probabilities of generating head or tail when it is flipped:
-\begin{cases*}
+
+$\text{coin 1: } y=1$
+\begin{gather*}
+\begin{cases}
   p(x^{(t)}) = \frac{1}{2} & \text{if } x^{(t)} = x_{head} \newline
   p(x^{(t)}) = \frac{1}{2} & \text{if } x^{(t)} = x_{tail}
-\end{cases*}
+\end{cases}
+\end{gather*}
 
 coin A: 1/2head, 1/2tail
 coin B: 1/3head, 2/3tail
