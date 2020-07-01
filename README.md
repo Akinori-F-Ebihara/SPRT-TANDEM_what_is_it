@@ -50,7 +50,7 @@ In this toy example, you can calculate the exact log-likelihood ratio for $X_1$ 
 
 Note that flipping trials are independent. Thus, the first coin is likely to be coin A, while the second coin is coin B.
 
-![LLR of coin flipping](./coin_flipping_LLR.png)
+<img src ="./coin_flipping_LLR.png" width=75%>
 
 
 
@@ -65,8 +65,9 @@ $H_1$: It is a spoof face. \\
 
 Now let's see an example. 
 
-(image)
-(image)
+<img src ="./live.pdf" width=75%>
+<img src ="./spoof_photo.pdf" width=75%>
+
 
 Here, you are confronting with two problems executing the SPRT. First, unlike the coin-flipping example, you do not know the generating probability of the given data. Second, the video frames are highly correlated, and the assumption of the original SPRT no longer holds. These two problems hamper calculating the likelihood ratio.
 
@@ -76,6 +77,8 @@ So what should we do? Here comes the SPRT-TANDEM algorithm. We use two kinds of 
 (TANDEM formula).
 
 Our proposed neural network is trained to explicitly calculate the TANDEM formula to provide the sequential likelihood ratio estimation. Below is the estimated likelihood trajectories of example 2.
+
+<img src ="./spoofing_LLR.png" width=75%>
 
 (figure: SPRT-TANDEM)
 
