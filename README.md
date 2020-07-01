@@ -18,7 +18,9 @@ This article is best read with the Chrome browser with [MathJax Plugin for GitHu
 ## Problem setting
 Imagine you have a sequential data,  
 
+\begin{align*}
 $X^{(1,T)} := \{ x^{(1)}, x^{(2)}, ..., x^{(t)}, ..., x^{(T)} \}$,  
+\end{align*}
 
 where $x^{(t)}$ is a data sample, such as a video frame, an audio signal, a neural firing rate, etc. The sequential data $X^{(1,T)}$ has an associated binary label $y\in\{1,0\}$ that indicates a class to which the sequential data belong. Your task is to correctly estimate the class label $y$, with a minimal number of data samples possible (say, $k < n$ samples). Generally speaking, there is a trade-off between speed (i.e., small data samples) and accuracy (i.e., a correct estimate of the label): using fewer samples tend to increase the misclassification rate, while highly accurate classification requires more data samples. Thus, it is a non-trivial problem.
 
