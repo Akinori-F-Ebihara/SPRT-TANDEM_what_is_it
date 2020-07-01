@@ -20,7 +20,7 @@ Imagine you have a sequential data,
 
 $X^{(1,T)} := \{ x^{(1)}, x^{(2)}, ..., x^{(t)}, ..., x^{(T)} \}$,  
 
-where $x^(t)$ is a data sample, such as a video frame, an audio signal, a neural firing rate, etc. The sequential data $X^{(1,T)}$ has an associated binary label $y\in\{1,0\}$ that indicates a class to which the sequential data belong. Your task is to correctly estimate the class label $y$, with a minimal number of data samples possible (say, $k < n$ samples). Generally speaking, there is a trade-off between speed (i.e., small data samples) and accuracy (i.e., a correct estimate of the label): using fewer samples tend to increase the misclassification rate, while highly accurate classification requires more data samples. Thus, it is a non-trivial problem.
+where $x^{(t)}$ is a data sample, such as a video frame, an audio signal, a neural firing rate, etc. The sequential data $X^{(1,T)}$ has an associated binary label $y\in\{1,0\}$ that indicates a class to which the sequential data belong. Your task is to correctly estimate the class label $y$, with a minimal number of data samples possible (say, $k < n$ samples). Generally speaking, there is a trade-off between speed (i.e., small data samples) and accuracy (i.e., a correct estimate of the label): using fewer samples tend to increase the misclassification rate, while highly accurate classification requires more data samples. Thus, it is a non-trivial problem.
 
 ## Sequential Probability Ratio Test
 One algorithm that provides a solution to the above tradeoff problem is the Sequential Probability Ratio Test, or SPRT, which was originally invented by Abraham Wald [5, 6]. The SPRT calculates the log-likelihood ratio (LLR) of two competing hypotheses (i.e., $y=1$ v.s. $y=0$) and updates the LLR every time a new sample is acquired until the LLR reaches one of the two thresholds for alternative hypotheses.
@@ -35,7 +35,10 @@ Let's start with a toy example to get the hang of the SPRT.
 <img src ="./sports_coin_toss.png" width=15%>
 
 You have two coins, but one of them is a skewed coin that has uneven probabilities of generating head or tail when it is flipped:
-
+\begin{align}
+    &coin 1, y=1: p_(x_{head}) = \frac{1}{2}
+    &coin 2, y=0: p_(x_{tail}) = \frac{1}{2}
+\end{align}
 coin A: 1/2head, 1/2tail
 coin B: 1/3head, 2/3tail
 
@@ -78,7 +81,7 @@ Here, you are confronting with two problems executing the SPRT. First, unlike th
 ## SPRT-TANDEM for the likelihood estimation
 So what should we do? Here comes the SPRT-TANDEM algorithm. We use two kinds of density ratio estimation algorithms, ratio matching approach, and probabilistic classification approach, to let a deep neural network estimate the likelihood ratio. To control a correlation length that is considered, we propose the TANDEM formula:
 
-\begin{align}\label{eq:TANDEM_formula}
+\begin{align}
     &\ \log \left(
         \frac{p(x^{(1)},x^{(2)}, ..., x^{(t)}| y=1)}{p(x^{(1)},x^{(2)}, ..., x^{(t)}| y=0)}
     \right)\nonumber \newline
