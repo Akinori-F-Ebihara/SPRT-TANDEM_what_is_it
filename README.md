@@ -21,12 +21,12 @@ Imagine you have a sequential data,
 where x^(n) can be a data sample, such as a video frame, an audio signal, a neural firing rate, etc. The sequential data has an associated label $y$ that indicates a class to which the sequential data belong. Your task is to correctly estimate the class label $y$, with a minimal number of data samples (say, $x_1, ... x_k$ samples where $k < n$). Generally speaking, there is a trade-off between speed (i.e., small data samples) and accuracy (i.e., a correct estimate of the label): using fewer samples tend to increase the misclassification rate, while high accurate classification requires more data samples. It is a non-trivial problem.
 
 ## Sequential Probability Ratio Test
-One algorithm that provides a solution to the above tradeoff problem is the Sequential Probability Ratio Test, or SPRT, which was originally invented by Abraham Wald [4, 5]. The SPRT calculates the log-likelihood ratio (LLR) of two competing hypotheses and updates the LLR every time a new sample is acquired until the LLR reaches one of the two thresholds for alternative hypotheses.
+One algorithm that provides a solution to the above tradeoff problem is the Sequential Probability Ratio Test, or SPRT, which was originally invented by Abraham Wald [5, 6]. The SPRT calculates the log-likelihood ratio (LLR) of two competing hypotheses and updates the LLR every time a new sample is acquired until the LLR reaches one of the two thresholds for alternative hypotheses.
 
 <img src ="./cartoon_SPRT_ver2.png" width=75%>
 
 As the figure above shows, for data that is easy to classify, the SPRT outputs an answer taking a few samples, whereas, for difficult data, the SPRT takes in numerous samples in order to make a ``careful'' decision. Importantly, Wald and his colleagues proved that when sequential data are sampled from independently and identically distributed (i.i.d.) data, SPRT can minimize the required number of samples to achieve the desired upper-bounds of false positive and false negative rates comparably to the
-Neyman-Pearson test, known as the most powerful likelihood test [3, 5]
+Neyman-Pearson test, known as the most powerful likelihood test [4, 6]
 
 ## Example 1: coin flipping
 Let's start with a toy example to get the hang of the SPRT.\\
@@ -80,7 +80,7 @@ Our proposed neural network is trained to explicitly calculate the TANDEM formul
 
 <img src ="./spoofing_LLR.png" width=75%>
 
-The conceptual figure of the proposed neural network is presented below. The network explicitly calculate the TANDEM formula. At the training phase, we adopted a novel loss function, LLLR, to minimize Kullback-Leibler Divergence [6] between the estimated and the true LLRs.  
+The conceptual figure of the proposed neural network is presented below. The network explicitly calculate the TANDEM formula. At the training phase, we adopted a novel loss function, LLLR, to minimize Kullback-Leibler Divergence [3] between the estimated and the true LLRs.  
 
 <img src ="./SPRT_concept_ver7.png" width=75%>
 
@@ -101,13 +101,15 @@ Please cite the paper if you find our work is useful:
 ```
 
 ## References
-[1] A. F. Ebihara, T. Miyagawa, K. Sakurai, and H. Imaoka. Deep neural networks for the sequential probability ratiotest on non-i.i.d. data series, __arXiv__, 2020
+[1] A. F. Ebihara, T. Miyagawa, K. Sakurai, and H. Imaoka. Deep neural networks for the sequential probability ratiotest on non-i.i.d. data series, arXiv, 2020
 
-[2] S. Kira, T. Yang, and M. N. Shadlen. A neural implementation of wald’s sequential probability rato test. ___Neuron___, 85(4):861–873, Feb. 2015.
+[2] S. Kira, T. Yang, and M. N. Shadlen. A neural implementation of wald’s sequential probability rato test. Neuron, 85(4):861–873, Feb. 2015.
 
-[3] A. Tartakovsky,  I. Nikiforov,  and M. Basseville.Sequential Analysis: Hypothesis Testing and ChangepointDetection. Chapman & Hall/CRC, 1st edition, 2014.
+[3] S. Kullback and R. A. Leibler. On information and sufficiency.Ann. Math. Statist., 22(1):79–86, 03 1951.
 
-[4] A. Wald. Sequential tests of statistical hypotheses. ___Ann. Math. Statist.___, 16(2):117–186, 06 1945.
+[4] A. Tartakovsky,  I. Nikiforov,  and M. Basseville.Sequential Analysis: Hypothesis Testing and ChangepointDetection. Chapman & Hall/CRC, 1st edition, 2014.
 
-[5] A. Wald.Sequential Analysis. John Wiley and Sons, 1st edition, 1947.
+[5] A. Wald. Sequential tests of statistical hypotheses. Ann. Math. Statist., 16(2):117–186, 06 1945.
+
+[6] A. Wald.Sequential Analysis. John Wiley and Sons, 1st edition, 1947.
 
