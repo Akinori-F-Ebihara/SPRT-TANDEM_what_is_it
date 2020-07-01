@@ -92,7 +92,7 @@ So what should we do? Here comes the SPRT-TANDEM algorithm. We use two kinds of 
         }{
             p(y=0| x^{(s-N)}, ...,x^{(s-1)})
         }
-    \right) \nn
+    \right) \nonumber \\ 
      & - \log\left( \frac{p(y=1)}{p(y=0)} \right) 
 \end{align}
 
