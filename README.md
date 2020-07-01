@@ -50,6 +50,7 @@ In this toy example, you can calculate the exact log-likelihood ratio for $X_1$ 
 
 Note that flipping trials are independent. Thus, the first coin is likely to be coin A, while the second coin is coin B.
 
+![LLR of coin flipping](./coin_flipping_LLR.png)
 
 
 
