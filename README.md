@@ -80,7 +80,7 @@ The SPRT algorithm makes an early decision for an easy data series, while it tak
 
 ## Citation
 Please cite the paper if you find our work is useful:
-'''
+```
 @misc{SPRT_TANDEM2020,
     title={Deep Neural Networks for the Sequential Probability Ratio Test on Non-i.i.d. Data Series},
     author={Akinori F. Ebihara and Taiki Miyagawa and Kazuyuki Sakurai and Hitoshi Imaoka},
@@ -89,7 +89,7 @@ Please cite the paper if you find our work is useful:
     archivePrefix={arXiv},
     primaryClass={cs.LG}
 }
-'''
+```
 
 ## References
 [1] A. F. Ebihara, T. Miyagawa, K. Sakurai, and H. Imaoka. Deep neural networks for the sequential probability ratiotest on non-i.i.d. data series, __arXiv__, 2020
