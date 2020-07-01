@@ -65,8 +65,8 @@ $H_1$: It is a spoof face. \\
 
 Now let's see an example. 
 
-<img src ="./live.pdf" width=75%>
-<img src ="./spoof_photo.pdf" width=75%>
+<img src ="./live.png" width=75%>
+<img src ="./spoof.png" width=75%>
 
 
 Here, you are confronting with two problems executing the SPRT. First, unlike the coin-flipping example, you do not know the generating probability of the given data. Second, the video frames are highly correlated, and the assumption of the original SPRT no longer holds. These two problems hamper calculating the likelihood ratio.
