@@ -15,7 +15,7 @@ While the technical details are left to the paper, we provide a casual introduct
 
 
 ## Requirements
-This article is best read with MathJax Plugin for GitHub:　　
+This article is best read with the MathJax Plugin for GitHub:  
 https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima?hl=en
 
 
