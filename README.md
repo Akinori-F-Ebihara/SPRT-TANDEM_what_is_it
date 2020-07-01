@@ -79,7 +79,7 @@ So what should we do? Here comes the SPRT-TANDEM algorithm. We use two kinds of 
 \begin{align}\label{eq:TANDEM_formula}
     &\, \log \left(
         \frac{p(x^{(1)},x^{(2)}, ..., x^{(t)}| y=1)}{p(x^{(1)},x^{(2)}, ..., x^{(t)}| y=0)}
-    \right)\nonumber \\ 
+    \right)\nonumber \newline
     = &\sum_{s=N+1}^{t} \log \left( 
         \frac{
             p(y=1| x^{(s-N)}, ...,x^{(s)})
