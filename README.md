@@ -80,8 +80,10 @@ $H_1$: It is a spoof face. \\
 
 Now let's see an example. 
 
+<div align="center">
 <img src ="./live.png">
 <img src ="./spoof.png">
+</div>
 
 
 Here, you are confronting with two problems executing the SPRT. First, unlike the coin-flipping example, you do not know the generating probability of the given data. Second, the video frames are highly correlated, and the assumption of the original SPRT no longer holds. These two problems hamper calculating the likelihood ratio.
@@ -111,11 +113,15 @@ So what should we do? Here comes the SPRT-TANDEM algorithm. We use two kinds of 
 
 Our proposed neural network is trained to explicitly calculate the TANDEM formula to provide the sequential likelihood ratio estimation. Below is the estimated likelihood trajectories of example 2.
 
+<div align="center">
 <img src ="./spoofing_LLR.png" width=75%>
+</div>
 
 The conceptual figure of the proposed neural network is presented below. The network explicitly calculate the TANDEM formula. At the training phase, we adopted a novel loss function, LLLR, to minimize Kullback-Leibler Divergence [3] between the estimated and the true LLRs.  
 
+<div align="center">
 <img src ="./SPRT_concept.png">
+</div>
 
 ## SPRT as an algorithm of the brain
 The SPRT algorithm makes an early decision for an easy data series, while it takes time to make a decision on a difficult data. This is quite in line with our daily mental process - the more difficult a problem is, the longer time we require for decision making. Indeed, the SPRT seems to be the best algorithm explaining neural activities in the primate brain. Kira et al. [2] found that neurons in the part of the primate brain called the lateral intraparietal cortex (LIP) showed neural activities reminiscent of the SPRT; when a monkey sequentially collecs random pieces of evidence to make a binary choice, LIP neurons show activities proportional to the LLR. Note that the presented stimuli are distributed i.i.d.; thus, it remains an open question if the brain uses the SPRT-TANDEM for correlated data or uses some other algorithm. 
