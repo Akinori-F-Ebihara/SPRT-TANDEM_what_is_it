@@ -82,7 +82,7 @@ Our proposed neural network is trained to explicitly calculate the TANDEM formul
 
 The conceptual figure of the proposed neural network is presented below. The network explicitly calculate the TANDEM formula. At the training phase, we adopted a novel loss function, LLLR, to minimize Kullback-Leibler Divergence [3] between the estimated and the true LLRs.  
 
-<img src ="./SPRT_concept.png" width=75%>
+<img src ="./SPRT_concept.png">
 
 ## SPRT as an algorithm of the brain
 The SPRT algorithm makes an early decision for an easy data series, while it takes time to make a decision on a difficult data. This is quite in line with our daily mental process - the more difficult a problem is, the longer time we require for decision making. Indeed, the SPRT seems to be the best algorithm explaining neural activities in the primate brain. Kira et al. [2] found that neurons in the part of the primate brain called the lateral intraparietal cortex (LIP) showed neural activities reminiscent of the SPRT; when a monkey sequentially collecs random pieces of evidence to make a binary choice, LIP neurons show activities proportional to the LLR. Note that the presented stimuli are distributed i.i.d.; thus, it remains an open question if the brain uses the SPRT-TANDEM for correlated data or uses some other algorithm. 
