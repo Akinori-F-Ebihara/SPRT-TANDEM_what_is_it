@@ -43,7 +43,7 @@ Let's start with a toy example to get the hang of the SPRT.
 
 You have two coins, but one of them is a skewed coin that has uneven probabilities of generating head or tail when it is flipped:
 
-$\text{coin 1: } y=1$
+$\text{coin A (unbiased): } y=0$
 \begin{gather*}
 \begin{cases}
   p(x^{(t)}) = \frac{1}{2} & \text{if } x^{(t)} = x_{head} \newline
@@ -51,16 +51,25 @@ $\text{coin 1: } y=1$
 \end{cases}
 \end{gather*}
 
-coin A: 1/2head, 1/2tail
-coin B: 1/3head, 2/3tail
+$\text{coin B (biased): } y=1$
+\begin{gather*}
+\begin{cases}
+  p(x^{(t)}) = \frac{1}{2} & \text{if } x^{(t)} = x_{head} \newline
+  p(x^{(t)}) = \frac{1}{2} & \text{if } x^{(t)} = x_{tail}
+\end{cases}
+\end{gather*}
 
-Coins are unlabeled, and you do not know which one is the coin A. Now, you want to experiment with the two coins. Flipping each of them six times yields the following results.
+You do not know which one is the coin A: the true label $y$ of the coins are unknown. Now, you want to experiment with the two coins to make a guess on the labels. Flipping each of them ten times yields the following results.
 
 The first coin:
-$X_1 = {\mathrm{head, head, tail, head, tail, tail}}$\\
+\begin{align*}
+    X_{1} = {x_{head}, x_{tail}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{tail}, x_{tail}, x_{tail}, x_{head}}
+\end{align*}
 
 The second coin:
-$X_2 = {\mathrm{tail, head, tail, head, tail, tail}}$
+\begin{align*}
+    X_{2} = {x_{head}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{head}, x_{head}, x_{tail}, x_{head}, x_{head}}
+\end{align*}
 
 you have two hypotheses: \\ $H_0$: It is the coin A. \\ $H_1$: It is the coin B.
 In this toy example, you can calculate the exact log-likelihood ratio for $X_1$ and $X_2$, because you know the probabilities of being head or tail:
