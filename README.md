@@ -40,7 +40,7 @@ You have two coins, but one of them is a skewed coin that has uneven probabiliti
     &\mathrm{coin 2}:  y=0,\ p_(x_{tail}) = \frac{1}{2} \nonumber
 \end{align}
 \begin{cases}
-  p(x^{(t)}) = \frac{1}{2} & \text{if } x^{{t}} = x_{head}\\
+  p(x^{(t)}) = \frac{1}{2} & \text{if } x^{{t}} = x_{head} \newline
   p(x^{(t)}) = \frac{1}{2} & \text{if } x^{{t}} = x_{tail}
 \end{cases}
 coin A: 1/2head, 1/2tail
