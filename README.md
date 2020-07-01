@@ -15,8 +15,13 @@ https://github.com/TaikiMiyagawa/SPRT-TANDEM
 While the technical details are left to the paper, we provide a casual introduction to our algorithm below.
 
 ## References
-[1] A. F. Ebihara, T. Miyagawa, K. Sakurai, and H. Imaoka. Deep neural networks for the sequential probability ratiotest on non-i.i.d. data series, __arXiv__, 2020  
-[2] S. Kira, T. Yang, and M. N. Shadlen. A neural implementation of wald’s sequential probability rato test. ___Neuron___, 85(4):861–873, Feb. 2015.  
-[3] A. Tartakovsky,  I. Nikiforov,  and M. Basseville.Sequential Analysis: Hypothesis Testing and ChangepointDetection. Chapman & Hall/CRC, 1st edition, 2014.  
+[1] A. F. Ebihara, T. Miyagawa, K. Sakurai, and H. Imaoka. Deep neural networks for the sequential probability ratiotest on non-i.i.d. data series, __arXiv__, 2020
+
+[2] S. Kira, T. Yang, and M. N. Shadlen. A neural implementation of wald’s sequential probability rato test. ___Neuron___, 85(4):861–873, Feb. 2015.
+
+[3] A. Tartakovsky,  I. Nikiforov,  and M. Basseville.Sequential Analysis: Hypothesis Testing and ChangepointDetection. Chapman & Hall/CRC, 1st edition, 2014.
+
 [4] A. Wald. Sequential tests of statistical hypotheses. ___Ann. Math. Statist.___, 16(2):117–186, 06 1945.
+
 [5] A. Wald.Sequential Analysis. John Wiley and Sons, 1st edition, 1947.
+
