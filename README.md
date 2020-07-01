@@ -6,16 +6,13 @@ SPRT-TANDEM is a sequential density ratio estimation algorithm originally propos
 
 The original paper [1] can be found [here:](https://arxiv.org/abs/2006.05587) 
 
-The tensorflow implementation of the SPRT-TANDEM can be found here:  
-https://github.com/TaikiMiyagawa/SPRT-TANDEM
-
+The tensorflow implementation of the SPRT-TANDEM can be found [here:](https://github.com/TaikiMiyagawa/SPRT-TANDEM)
 
 While the technical details are left to the paper, we provide a casual introduction to our algorithm below.
 
 
 ## Requirements
-This article is best read with the MathJax Plugin for GitHub:  
-https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima?hl=en
+This article is best read with the [MathJax Plugin for GitHub:](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima?hl=en)
 
 
 ## Problem setting
