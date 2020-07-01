@@ -75,8 +75,21 @@ Our proposed neural network is trained to explicitly calculate the TANDEM formul
 (figure: SPRT-TANDEM)
 
 
-# SPRT as an algorithm of the brain
+## SPRT as an algorithm of the brain
 The SPRT algorithm makes an early decision for an easy data series, while it takes time to make a decision on a difficult data. This is quite in line with our daily mental process - the more difficult a problem is, the longer time we require for decision making. Indeed, the SPRT seems to be the best algorithm explaining neural activities in the primate brain. Kira et al. [2] found that neurons in the part of the primate brain called the lateral intraparietal cortex (LIP) showed neural activities reminiscent of the SPRT; when a monkey sequentially collecs random pieces of evidence to make a binary choice, LIP neurons show activities proportional to the LLR. Note that the presented stimuli are distributed i.i.d.; thus, it remains an open question if the brain uses the SPRT-TANDEM for correlated data or uses some other algorithm. 
+
+## Citation
+Please cite the paper if you find our work is useful:
+'''
+@misc{SPRT_TANDEM2020,
+    title={Deep Neural Networks for the Sequential Probability Ratio Test on Non-i.i.d. Data Series},
+    author={Akinori F. Ebihara and Taiki Miyagawa and Kazuyuki Sakurai and Hitoshi Imaoka},
+    year={2020},
+    eprint={2006.05587},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
+}
+'''
 
 ## References
 [1] A. F. Ebihara, T. Miyagawa, K. Sakurai, and H. Imaoka. Deep neural networks for the sequential probability ratiotest on non-i.i.d. data series, __arXiv__, 2020
