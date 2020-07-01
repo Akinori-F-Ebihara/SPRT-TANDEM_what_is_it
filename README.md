@@ -51,6 +51,8 @@ In this toy example, you can calculate the exact log-likelihood ratio for $X_1$ 
 Note that flipping trials are independent. Thus, the first coin is likely to be coin A, while the second coin is coin B.
 
 
+
+
 ## Example 2: face spoofing detection
 \subsection{Example 2: face spoofing detection}
 Next, let's consider a more realistic scenario: face spoofing detection. Face spoofing detection is one of the biometrics task classifying a facial image into a live face class, or a spoof face class (e.g., a facial photo, a face displayed on a screen, a face mask).\\
