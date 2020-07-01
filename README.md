@@ -13,6 +13,12 @@ https://github.com/TaikiMiyagawa/SPRT-TANDEM
 
 While the technical details are left to the paper, we provide a casual introduction to our algorithm below.
 
+
+## Requirements
+This article is best read with MathJax Plugin for GitHub:　　
+https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima?hl=en
+
+
 ## Problem setting
 Imagine you have a sequential data, 
 ( x^(1), x^(2), ...),
