@@ -23,14 +23,14 @@ where x^(n) can be a data sample, such as a video frame, an audio signal, a neur
 ## Sequential Probability Ratio Test
 One algorithm that provides a solution to the above tradeoff problem is the Sequential Probability Ratio Test, or SPRT, which was originally invented by Abraham Wald [5, 6]. The SPRT calculates the log-likelihood ratio (LLR) of two competing hypotheses and updates the LLR every time a new sample is acquired until the LLR reaches one of the two thresholds for alternative hypotheses.
 
-<img src ="./cartoon_SPRT.png" width=25%>
+<img src ="./cartoon_SPRT.png" width=75%>
 
 As the figure above shows, for data that is easy to classify, the SPRT outputs an answer taking a few samples, whereas, for difficult data, the SPRT takes in numerous samples in order to make a ``careful'' decision. Importantly, Wald and his colleagues proved that when sequential data are sampled from independently and identically distributed (i.i.d.) data, SPRT can minimize the required number of samples to achieve the desired upper-bounds of false positive and false negative rates comparably to the
 Neyman-Pearson test, known as the most powerful likelihood test [4, 6].
 
 ## Example 1: coin flipping
 Let's start with a toy example to get the hang of the SPRT.  
-<img src ="./sports_coin_toss.png" width=75%>
+<img src ="./sports_coin_toss.png" width=15%>
 
 You have two coins, but one of them is a skewed coin that has uneven probabilities of generating head or tail when it is flipped:
 
@@ -52,7 +52,7 @@ In this toy example, you can calculate the exact log-likelihood ratio for $X_1$ 
 
 Note that flipping trials are independent. Thus, the first coin is likely to be coin A, while the second coin is coin B.
 
-<img src ="./coin_flipping_LLR.png" width=25%>
+<img src ="./coin_flipping_LLR.png" width=75%>
 
 
 
