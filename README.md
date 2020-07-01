@@ -77,7 +77,7 @@ Here, you are confronting with two problems executing the SPRT. First, unlike th
 So what should we do? Here comes the SPRT-TANDEM algorithm. We use two kinds of density ratio estimation algorithms, ratio matching approach, and probabilistic classification approach, to let a deep neural network estimate the likelihood ratio. To control a correlation length that is considered, we propose the TANDEM formula:
 
 \begin{align}\label{eq:TANDEM_formula}
-    &\, \log \left(
+    &\ \log \left(
         \frac{p(x^{(1)},x^{(2)}, ..., x^{(t)}| y=1)}{p(x^{(1)},x^{(2)}, ..., x^{(t)}| y=0)}
     \right)\nonumber \newline
     = &\sum_{s=N+1}^{t} \log \left( 
@@ -92,7 +92,7 @@ So what should we do? Here comes the SPRT-TANDEM algorithm. We use two kinds of 
         }{
             p(y=0| x^{(s-N)}, ...,x^{(s-1)})
         }
-    \right) \nonumber \\ 
+    \right) \nonumber \newline
      & - \log\left( \frac{p(y=1)}{p(y=0)} \right) 
 \end{align}
 
