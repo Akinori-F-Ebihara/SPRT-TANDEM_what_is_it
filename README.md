@@ -12,7 +12,7 @@ While the technical details are left to the paper, we provide a casual introduct
 
 
 ## Requirements
-This article is best read with the Chrome browser with [MathJax Plugin for GitHub:](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima?hl=en)
+This article is best read with the Chrome browser with [MathJax Plugin for GitHub](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima?hl=en)
 
 
 ## Problem setting
@@ -42,13 +42,10 @@ Let's start with a toy example to get the hang of the SPRT.
 </div>
 
 You have two coins, but one of them is a skewed coin that has uneven probabilities of generating head or tail when it is flipped:
-\begin{gather*}
-\text{coin 1: } y = 1 \newline
-\begin{cases}
+\begin{cases*}
   p(x^{(t)}) = \frac{1}{2} & \text{if } x^{(t)} = x_{head} \newline
   p(x^{(t)}) = \frac{1}{2} & \text{if } x^{(t)} = x_{tail}
-\end{cases}
-\end{gather*}
+\end{cases*}
 
 coin A: 1/2head, 1/2tail
 coin B: 1/3head, 2/3tail
