@@ -36,7 +36,10 @@ As the schematic figure above shows, for data that is easy to classify, the SPRT
 
 ## Example 1: coin flipping
 Let's start with a toy example to get the hang of the SPRT.  
+
+<div align="center">
 <img src ="./sports_coin_toss.png" width=15%>
+</div>
 
 You have two coins, but one of them is a skewed coin that has uneven probabilities of generating head or tail when it is flipped:
 \begin{gather*}
@@ -65,7 +68,9 @@ In this toy example, you can calculate the exact log-likelihood ratio for $X_1$ 
 
 Note that flipping trials are independent. Thus, the first coin is likely to be coin A, while the second coin is coin B.
 
+<div align="center">
 <img src ="./coin_flipping_LLR.png" width=75%>
+</div>
 
 
 
@@ -84,7 +89,6 @@ Now let's see an example.
 <img src ="./live.png">
 <img src ="./spoof.png">
 </div>
-
 
 Here, you are confronting with two problems executing the SPRT. First, unlike the coin-flipping example, you do not know the generating probability of the given data. Second, the video frames are highly correlated, and the assumption of the original SPRT no longer holds. These two problems hamper calculating the likelihood ratio.
 
