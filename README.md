@@ -62,17 +62,25 @@ $\text{coin B (biased): } y=1$
 You do not know which one is the coin A: the true label $y$ of the coins are unknown. Now, you want to experiment with the two coins to make a guess on the labels. Flipping each of them ten times yields the following results.
 
 The first coin:
+\begin{equation*}
 \begin{align*}
     X_{1} = {x_{head}, x_{tail}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{tail}, x_{tail}, x_{tail}, x_{head}}
 \end{align*}
+\begin{equation*}
 
 The second coin:
 \begin{align*}
     X_{2} = {x_{head}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{head}, x_{head}, x_{tail}, x_{head}, x_{head}}
 \end{align*}
 
-you have two hypotheses: \\ $H_0$: It is the coin A. \\ $H_1$: It is the coin B.
-In this toy example, you can calculate the exact log-likelihood ratio for $X_1$ and $X_2$, because you know the probabilities of being head or tail:
+you have two hypotheses:  
+
+\begin{align*}
+    &H_0: y=0 \text{ :It is the coin A.} \newline
+    &H_1: y=1 \text{ : It is the coin B.}
+\end{align*}
+
+Luckily, in thie example you can calculate the exact log-likelihood ratio for $X_1$ and $X_2$, because you already know the probabilities of being head or tail:
 
 (likelihood calculation)
 
