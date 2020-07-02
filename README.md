@@ -92,25 +92,25 @@ In order to use the SPRT for testing hypotheses, you need to calculate the LLR. 
    := & \log \left(
         \frac{p(X_{1}^{(1,10)} | y=1)}
              {p(X_{1}^{(1,10)} | y=0)} 
-    \right) \newline
-    = & \sum_{t=1}^{10} \log \frac{p( x_1^{(t)} | y=1)} {p( x_1^{(t)} | y=0)} \newline
-    = & \log \left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log \left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) \newline
-    + &\log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} }\right) \newline
+    \right) \nonumber \newline
+    = & \sum_{t=1}^{10} \log \frac{p( x_1^{(t)} | y=1)} {p( x_1^{(t)} | y=0)} \nonumber \newline
+    = & \log \left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log \left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) \nonumber \newline
+    + &\log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} }\right) \nonumber \newline
     \approx & 0.80
 \end{align}
 
 
-\begin{align*}
+\begin{align}
   \mathrm{LLR}(X_2^{(1,10)}) 
    := & \log \left(
         \frac{p(X_{1}^{(1,10)} | y=1)}
              {p(X_{1}^{(1,10)} | y=0)} 
-    \right) \newline
-    = & \sum_{t=1}^{10} \log \frac{p( x_2^{(t)} | y=1)} {p( x_2^{(t)} | y=0)} \newline
-    = & \log \left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log \left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) \newline
-    + &\log\left(\frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} }\right) \newline
+    \right) \\nonumber newline
+    = & \sum_{t=1}^{10} \log \frac{p( x_2^{(t)} | y=1)} {p( x_2^{(t)} | y=0)} \nonumber \newline
+    = & \log \left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log \left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) \nonumber \newline
+    + &\log\left(\frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} }\right) \nonumber \newline
     \approx & -1.28
-\end{align*}
+\end{align}
 
 $\mathrm{LLR}(X_1^{(1,10)}) $ has a positive value, while $\mathrm{LLR}(X_2^{(1,10)})$ has a negative value. Thus, the first coin is likely to be the biased coin, while the second coin is unbiased. The figure below shows the cumulative sum of the LLR that is updated at each acquisition of a new data sample.
 
@@ -126,10 +126,10 @@ Next, let's consider a more realistic application: face spoofing detection. Face
 
 In this example, you are presented with a series of facial image to choose one of the two hypotheses,  
 
-\begin{align*}
+\begin{align}
     &H_0: y=0 \text{   (It is a live face.)} \newline
     &H_1: y=1 \text{   (It is a spoof face.)}
-\end{align*}
+\end{align}
 
 Now let's see an example video. 
 
@@ -148,7 +148,7 @@ The next step is to calculate the LLR to test the hypotheses. But how? Here, you
 ## SPRT-TANDEM for the likelihood estimation
 So what should we do? Here comes the SPRT-TANDEM algorithm. We use two kinds of density ratio estimation algorithms, ratio matching approach, and probabilistic classification approach, to let a deep neural network estimate the likelihood ratio. To control a correlation length that is considered, we propose the TANDEM formula:
 
-\begin{align*}
+\begin{align}
     &\ \log \left(
         \frac{p(x^{(1)},x^{(2)}, ..., x^{(t)}| y=1)}{p(x^{(1)},x^{(2)}, ..., x^{(t)}| y=0)}
     \right)\nonumber \newline
@@ -166,7 +166,7 @@ So what should we do? Here comes the SPRT-TANDEM algorithm. We use two kinds of 
         }
     \right) \nonumber \newline
      & - \log\left( \frac{p(y=1)}{p(y=0)} \right) 
-\end{align*}
+\end{align}
 
 Our proposed neural network is trained to explicitly calculate the TANDEM formula to provide the sequential likelihood ratio estimation. Below is the estimated likelihood trajectories of example 2.
 
