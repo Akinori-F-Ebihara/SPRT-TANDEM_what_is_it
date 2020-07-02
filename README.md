@@ -170,13 +170,13 @@ So what should we do? Here comes the SPRT-TANDEM algorithm. We use two kinds of 
      & - \log\left( \frac{p(y=1)}{p(y=0)} \right) 
 \end{align}
 
-Our proposed neural network is trained to explicitly calculate the TANDEM formula to provide the sequential likelihood ratio estimation. Below is the estimated likelihood trajectories of example 2.
+For the derivation, see Appendix C of the original paper [1]. Our proposed neural network is trained to explicitly calculate the TANDEM formula to provide the sequential likelihood ratio estimation. We trained the neural network with live and spoof faces like Example 2 (to be precise, we used an infrared channel of facial images) so that the network can sequentially estimate the LLR from the data series. Below is the calculatd likelihood trajectories of Example 2.
 
 <div align="center">
 <img src ="./spoofing_LLR.png" width=75%>
 </div>
 
-The conceptual figure of the proposed neural network is presented below. The network explicitly calculate the TANDEM formula. At the training phase, we adopted a novel loss function, LLLR, to minimize Kullback-Leibler Divergence [3] between the estimated and the true LLRs.  
+The conceptual figure of the proposed neural network is presented below. At the training phase, we adopted a novel loss function, LLLR, to minimize Kullback-Leibler Divergence [3] between the estimated and the true LLRs. For the detail, see Section 4 of the original paper [1].  
 
 <div align="center">
 <img src ="./SPRT_concept.png">
