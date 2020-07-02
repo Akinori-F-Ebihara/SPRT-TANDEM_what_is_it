@@ -17,9 +17,9 @@ This article is best read with the Chrome browser with [MathJax Plugin for GitHu
 ## Problem setting
 Imagine you have a sequential data,  
 
-\begin{align*}
+\begin{equation}
 X^{(1,T)} := \lbrace x^{(1)}, x^{(2)}, ..., x^{(t)}, ..., x^{(T)} \rbrace,  
-\end{align*}
+\end{equation}
 
 where $x^{(t)}$ is a data sample, such as a video frame, an audio signal, a neural firing rate, etc. The sequential data $X^{(1,T)}$ has an associated binary label $y\in\lbrace1,0\rbrace$ that indicates a class to which the sequential data belong. Your task is to correctly estimate the class label $y$, with a minimal number of data samples possible (say, $k < n$ samples). Generally speaking, there is a trade-off between speed (i.e., small data samples) and accuracy (i.e., a correct estimate of the label): using fewer samples tend to increase the misclassification rate, while highly accurate classification requires more data samples. Thus, it is a non-trivial problem.
 
@@ -43,29 +43,21 @@ Let's start with a toy example to get the hang of the SPRT.
 
 You have two coins, but one of them is a skewed coin that has uneven probabilities of generating head or tail when it is flipped:
 
-$\text{Unbiased coin: } y=0$
-\begin{gather*}
-\begin{cases}
-  p(x^{(t)} | y=0) = \frac{1}{2} & \text{if } x^{(t)} = x_{head} \newline
-  p(x^{(t)} | y=0) = \frac{1}{2} & \text{if } x^{(t)} = x_{tail}
-\end{cases}
-\end{gather*}
-
 \begin{equation}
-\text{Unbiased coin: } y=0
+\text{Unbiased coin: } y=0 \;
 \begin{cases}
   p(x^{(t)} | y=0) = \frac{1}{2} & \text{if } x^{(t)} = x_{head} \newline
   p(x^{(t)} | y=0) = \frac{1}{2} & \text{if } x^{(t)} = x_{tail}
 \end{cases}
 \end{equation}
 
-$\text{Biased coin: } y=1$
-\begin{gather*}
+\begin{equation}
+\text{Biased coin: } y=1 \;
 \begin{cases}
   p(x^{(t)}| y=1) = \frac{1}{3} & \text{if } x^{(t)} = x_{head} \newline
   p(x^{(t)}| y=1) = \frac{2}{3} & \text{if } x^{(t)} = x_{tail}
 \end{cases}
-\end{gather*}
+\end{equation}
 
 You do not know which one is biased: the true label $y$ of the coins are unknown. Now, you want to experiment with the two coins to make a guess on the labels. Thus, the two hypotheses are:  
 
