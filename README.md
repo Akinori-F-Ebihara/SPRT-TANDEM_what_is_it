@@ -71,18 +71,24 @@ You do not know which one is biased: the true label $y$ of the coins are unknown
 Flipping each of them ten times yields the following results. Note that we assume each flipping trial is independent.
 
 The first coin:
-\begin{align*}
+\begin{align}
+\begin{split}
     X_{1}^{(1, 10)} = \lbrace x_{head}, x_{tail}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{tail}, x_{tail}, x_{tail}, x_{head} \rbrace
-\end{align*}
+\end{split}
+\end{align}
 
 The second coin:
-\begin{align*}
+\begin{align}
+\begin{split}
     X_{2}^{(1, 10)} = \lbrace x_{head}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{head}, x_{head}, x_{tail}, x_{head}, x_{head} \rbrace
-\end{align*}
+\end{split}
+\end{align}
+
 
 In order to use the SPRT for testing hypotheses, you need to calculate the LLR. Luckily, in this example you can calculate the exact log-likelihood ratio for $X_{1}^{{1, 10}} $ and $X_{2}^{{1, 10}}$ easily, because (i) you already know the probabilities of being head or tail, and (ii) each flipping trial can be handled as independent:
 
-\begin{align*}
+\begin{align}
+\begin{split}
   \mathrm{LLR}(X_1^{(1,10)}) 
    := & \log \left(
         \frac{p(X_{1}^{(1,10)} | y=1)}
@@ -92,7 +98,9 @@ In order to use the SPRT for testing hypotheses, you need to calculate the LLR. 
     = & \log \left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log \left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) \newline
     + &\log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} }\right) \newline
     \approx & 0.80
-\end{align*}
+\end{split}
+\end{align}
+
 
 \begin{align*}
   \mathrm{LLR}(X_2^{(1,10)}) 
