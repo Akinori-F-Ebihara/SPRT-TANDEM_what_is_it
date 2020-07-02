@@ -51,6 +51,14 @@ $\text{Unbiased coin: } y=0$
 \end{cases}
 \end{gather*}
 
+\begin{equation}
+\text{Unbiased coin: } y=0
+\begin{cases}
+  p(x^{(t)} | y=0) = \frac{1}{2} & \text{if } x^{(t)} = x_{head} \newline
+  p(x^{(t)} | y=0) = \frac{1}{2} & \text{if } x^{(t)} = x_{tail}
+\end{cases}
+\end{equation}
+
 $\text{Biased coin: } y=1$
 \begin{gather*}
 \begin{cases}
