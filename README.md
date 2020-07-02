@@ -43,7 +43,7 @@ Let's start with a toy example to get the hang of the SPRT.
 
 You have two coins, but one of them is a skewed coin that has uneven probabilities of generating head or tail when it is flipped:
 
-$\text{coin A (unbiased): } y=0$
+$\text{Unbiased coin: } y=0$
 \begin{gather*}
 \begin{cases}
   p(x^{(t)} | y=0) = \frac{1}{2} & \text{if } x^{(t)} = x_{head} \newline
@@ -51,7 +51,7 @@ $\text{coin A (unbiased): } y=0$
 \end{cases}
 \end{gather*}
 
-$\text{coin B (biased): } y=1$
+$\text{Biased coin: } y=1$
 \begin{gather*}
 \begin{cases}
   p(x^{(t)}| y=1) = \frac{1}{3} & \text{if } x^{(t)} = x_{head} \newline
@@ -76,8 +76,8 @@ The second coin:
 you have two hypotheses:  
 
 \begin{align*}
-    &H_0: y=0 \text{   (It is the coin A.)} \newline
-    &H_1: y=1 \text{   (It is the coin B.)}
+    &H_0: y=0 \text{   (It is the unbiased coin.)} \newline
+    &H_1: y=1 \text{   (It is the biased coin.)}
 \end{align*}
 
 Luckily, in thie example you can calculate the exact log-likelihood ratio for $X_{1}^{{1, 10}} $ and $X_{2}^{{1, 10}}$ easily, because (i) you already know the probabilities of being head or tail, and (ii) each flipping trial can be handled as independent:
@@ -91,9 +91,21 @@ Luckily, in thie example you can calculate the exact log-likelihood ratio for $X
     = & \sum_{t=1}^{10} \log \frac{p( x_1^{(t)} | y=1)} {p( x_1^{(t)} | y=0)} \newline
     = & \log \left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log \left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) \newline
     + &\log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} }\right) \newline
-    =
     \approx & 0.80
 \end{align*}
+
+\begin{align*}
+  \mathrm{LLR}(X_2^{(1,10)}) 
+   := & \log \left(
+        \frac{p(X_{1}^{(1,10)} | y=1)}
+             {p(X_{1}^{(1,10)} | y=0)} 
+    \right) \\
+    = & \sum_{t=1}^{10} \log \frac{p( x_2^{(t)} | y=1)} {p( x_2^{(t)} | y=0)} \\
+    = & \log \left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log \left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) \\
+    + &\log\left(\frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} }\right) \\
+    \approx & -1.28
+\end{align*}
+
 
 Note that flipping trials are independent. Thus, the first coin is likely to be coin A, while the second coin is coin B.
 
