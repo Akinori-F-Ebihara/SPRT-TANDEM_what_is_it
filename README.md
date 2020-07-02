@@ -63,13 +63,14 @@ You do not know which one is the coin A: the true label $y$ of the coins are unk
 
 The first coin:
 \begin{align*}
-    X_{1}^{{1, 10}} = \{x_1(\text{head}), x_1(\text{tail}), x_1(\text{tail}), x_1(\text{head}), x_1(\text{tail}), x_1(\text{tail}), x_1(\text{tail}), x_1(\text{tail}), x_1(\text{tail}), x_1(\text{head})\}
+    X_{1}^{(1, 10)} = \left\{x_{head}, x_{tail}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{tail}, x_{tail}, x_{tail}, x_{head} \right\}
 \end{align*}
 
 The second coin:
 \begin{align*}
-    X_{2}^{{1, 10}} = \{x_2(\text{head}), x_2(\text{tail}), x_2(\text{head}), x_2(\text{tail}), x_2(\text{tail}), x_2(\text{head}), x_2(\text{head}), x_2(\text{tail}), x_2(\text{head}), x_2(\text{head})\}
+    X_{2}^{(1, 10)} = \left{x_{head}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{head}, x_{head}, x_{tail}, x_{head}, x_{head}\right}
 \end{align*}
+
 
 
 you have two hypotheses:  
