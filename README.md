@@ -63,13 +63,14 @@ You do not know which one is the coin A: the true label $y$ of the coins are unk
 
 The first coin:
 \begin{align*}
-    X_{1}^{{1, 10}} = {x_{head}, x_{tail}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{tail}, x_{tail}, x_{tail}, x_{head}}
+    X_{1}^{{1, 10}} = \{x_1(\text{head}), x_1(\text{tail}), x_1(\text{tail}), x_1(\text{head}), x_1(\text{tail}), x_1(\text{tail}), x_1(\text{tail}), x_1(\text{tail}), x_1(\text{tail}), x_1(\text{head})\}
 \end{align*}
 
 The second coin:
 \begin{align*}
-    X_{2}^{{1, 10}} = {x_{head}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{head}, x_{head}, x_{tail}, x_{head}, x_{head}}
+    X_{2}^{{1, 10}} = \{x_2(\text{head}), x_2(\text{tail}), x_2(\text{head}), x_2(\text{tail}), x_2(\text{tail}), x_2(\text{head}), x_2(\text{head}), x_2(\text{tail}), x_2(\text{head}), x_2(\text{head})\}
 \end{align*}
+
 
 you have two hypotheses:  
 
@@ -85,7 +86,7 @@ Luckily, in thie example you can calculate the exact log-likelihood ratio for $X
         \frac{p(X_{1}^(1,10) | y=1)}{p(X_{1}^(1,10)| y=0)} 
     \right)
     = \sum_{t=1}^{10} \log \frac{p( x_1^{(t)} | y=1)} {p( x_1^{(t)} | y=0)}
-\begin{align*}
+\end{align*}
 
 Note that flipping trials are independent. Thus, the first coin is likely to be coin A, while the second coin is coin B.
 
