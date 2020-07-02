@@ -76,17 +76,21 @@ The second coin:
 you have two hypotheses:  
 
 \begin{align*}
-    &H_0: y=0 \text{ :It is the coin A.} \newline
-    &H_1: y=1 \text{ : It is the coin B.}
+    &H_0: y=0 \text{   (It is the coin A.)} \newline
+    &H_1: y=1 \text{   (It is the coin B.)}
 \end{align*}
 
 Luckily, in thie example you can calculate the exact log-likelihood ratio for $X_{1}^{{1, 10}} $ and $X_{2}^{{1, 10}}$ easily, because (i) you already know the probabilities of being head or tail, and (ii) each flipping trial can be handled as independent:
 
 \begin{align*}
-    &\ \log \left(
-        \frac{p(X_{1}^(1,10) | y=1)}{p(X_{1}^(1,10)| y=0)} 
-    \right)
-    = \sum_{t=1}^{10} \log \frac{p( x_1^{(t)} | y=1)} {p( x_1^{(t)} | y=0)}
+  \mathrm{LLR}(X_1^{(1,10)}) 
+   := & \log \left(
+        \frac{p(X_{1}^{(1,10)} | y=1)}
+             {p(X_{1}^{(1,10)} | y=0)} 
+    \right) \\
+    = & \sum_{t=1}^{10} \log \frac{p( x_1^{(t)} | y=1)} {p( x_1^{(t)} | y=0)} \\
+    = & \log \left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log \left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) \\
+    + &\log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} }\right)
 \end{align*}
 
 Note that flipping trials are independent. Thus, the first coin is likely to be coin A, while the second coin is coin B.
