@@ -71,8 +71,6 @@ The second coin:
     X_{2}^{(1, 10)} = \lbrace x_{head}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{head}, x_{head}, x_{tail}, x_{head}, x_{head} \rbrace
 \end{align*}
 
-
-
 you have two hypotheses:  
 
 \begin{align*}
@@ -116,17 +114,24 @@ If we set two thresholds $\pm 1.0$, $X_1^{(1,10)}$ and $X_2^{(1,10)}$ are correc
 
 
 ## Example 2: face spoofing detection
-Next, let's consider a more realistic scenario: face spoofing detection. Face spoofing detection is one of the biometrics task classifying a facial image into a live face class, or a spoof face class (e.g., a facial photo, a face displayed on a screen, a face mask).\\
+Next, let's consider a more realistic application: face spoofing detection. Face spoofing detection is one of the biometrics task classifying a facial image into a live face class, or a spoof face class (e.g., a facial photo, a face displayed on a screen, a face mask).  
 
-In this example, you are presented with a series of facial image to choose one of the two hypotheses,\\
+In this example, you are presented with a series of facial image to choose one of the two hypotheses,  
 
-$H_0$: It is a live face. \\
-$H_1$: It is a spoof face. \\ 
+\begin{align*}
+    &H_0: y=0 \text{   (It is a live face.)} \newline
+    &H_1: y=1 \text{   (It is a spoof face.)}
+\end{align*}
 
-Now let's see an example. 
+Now let's see an example video. 
 
+$X_1^{(1,6)}$:
 <div align="center">
 <img src ="./live.png">
+</div>  
+
+$X_2^{(1,6)}$:
+<div align="center">
 <img src ="./spoof.png">
 </div>
 
