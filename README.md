@@ -106,16 +106,16 @@ Luckily, in thie example you can calculate the exact log-likelihood ratio for $X
     \approx & -1.28
 \end{align*}
 
-$\mathrm{LLR}(X_1^{(1,10)}) $ has a positive value, while $\mathrm{LLR}(X_2^{(1,10)})$ has a negative value. Thus, the first coin is likely to be the biased coin, while the second coin is unbiased. Setting two thresholds $\pm 1$ results in decision makings at 9th and 10th frame.
+$\mathrm{LLR}(X_1^{(1,10)}) $ has a positive value, while $\mathrm{LLR}(X_2^{(1,10)})$ has a negative value. Thus, the first coin is likely to be the biased coin, while the second coin is unbiased. The figure below shows the cumulative sum of the LLR that is updated at each acquisition of a new data sample.
 
 <div align="center">
 <img src ="./coin_flipping_LLR.png" width=75%>
 </div>
 
+If we set two thresholds $\pm 1.0$, $X_1^{(1,10)}$ and $X_2^{(1,10)}$ are correctly classified at the 9th and 10th frame, respectively.
 
 
 ## Example 2: face spoofing detection
-\subsection{Example 2: face spoofing detection}
 Next, let's consider a more realistic scenario: face spoofing detection. Face spoofing detection is one of the biometrics task classifying a facial image into a live face class, or a spoof face class (e.g., a facial photo, a face displayed on a screen, a face mask).\\
 
 In this example, you are presented with a series of facial image to choose one of the two hypotheses,\\
