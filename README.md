@@ -61,10 +61,12 @@ You have two coins, but one of them is a skewed coin that has uneven probabiliti
 
 You do not know which one is biased: the true label $y$ of the coins are unknown. Now, you want to experiment with the two coins to make a guess on the labels. Thus, the two hypotheses are:  
 
-\begin{equation}
+\begin{align}
+\begin{split}
     &H_0: y=0 \text{   (It is the unbiased coin.)} \newline
     &H_1: y=1 \text{   (It is the biased coin.)}
-\end{equation}
+\end{split}
+\end{align}
 
 Flipping each of them ten times yields the following results. Note that we assume each flipping trial is independent.
 
