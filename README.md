@@ -197,6 +197,9 @@ Please cite the paper if you find our work is useful:
 }
 ```
 
+## Acknowledgements
+The author thanks Hirofumi Nakayama for valuable comments to improve the article.
+
 ## References
 [1] A. F. Ebihara, T. Miyagawa, K. Sakurai, and H. Imaoka. Deep neural networks for the sequential probability ratiotest on non-i.i.d. data series, arXiv, 2020
 
