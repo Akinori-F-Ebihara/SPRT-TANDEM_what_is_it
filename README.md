@@ -44,7 +44,7 @@ Let's start with a toy example to get the hang of the SPRT.
 You have two coins, but one of them is a skewed coin that has uneven probabilities of generating head or tail when it is flipped:
 
 \begin{equation}
-\text{Unbiased coin: } y=0 \;
+\text{Unbiased coin: } y=0 \\;
 \begin{cases}
   p(x^{(t)} | y=0) = \frac{1}{2} & \text{if } x^{(t)} = x_{head} \newline
   p(x^{(t)} | y=0) = \frac{1}{2} & \text{if } x^{(t)} = x_{tail}
@@ -52,7 +52,7 @@ You have two coins, but one of them is a skewed coin that has uneven probabiliti
 \end{equation}
 
 \begin{equation}
-\text{Biased coin: } y=1 \;
+\text{Biased coin: } y=1 \\;
 \begin{cases}
   p(x^{(t)}| y=1) = \frac{1}{3} & \text{if } x^{(t)} = x_{head} \newline
   p(x^{(t)}| y=1) = \frac{2}{3} & \text{if } x^{(t)} = x_{tail}
