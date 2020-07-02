@@ -130,7 +130,7 @@ In this example, you are presented with a series of facial image to choose one o
 \begin{split}
     &H_0: y=0 \text{   (It is a live face.)} \newline
     &H_1: y=1 \text{   (It is a spoof face.)}
-\begin{end}
+\end{split}
 \end{align}
 
 Now let's see an example video. 
