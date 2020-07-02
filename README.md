@@ -59,18 +59,16 @@ $\text{coin B (biased): } y=1$
 \end{cases}
 \end{gather*}
 
-You do not know which one is the coin A: the true label $y$ of the coins are unknown. Now, you want to experiment with the two coins to make a guess on the labels. Flipping each of them ten times yields the following results.
+You do not know which one is the coin A: the true label $y$ of the coins are unknown. Now, you want to experiment with the two coins to make a guess on the labels, assuming that each flipping trial can be considered as independent. Flipping each of them ten times yields the following results.
 
 The first coin:
-\begin{equation*}
 \begin{align*}
-    X_{1} = {x_{head}, x_{tail}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{tail}, x_{tail}, x_{tail}, x_{head}}
+    X_{1}^{{1, 10}} = {x_{head}, x_{tail}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{tail}, x_{tail}, x_{tail}, x_{head}}
 \end{align*}
-\begin{equation*}
 
 The second coin:
 \begin{align*}
-    X_{2} = {x_{head}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{head}, x_{head}, x_{tail}, x_{head}, x_{head}}
+    X_{2}^{{1, 10}} = {x_{head}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{head}, x_{head}, x_{tail}, x_{head}, x_{head}}
 \end{align*}
 
 you have two hypotheses:  
@@ -80,9 +78,14 @@ you have two hypotheses:
     &H_1: y=1 \text{ : It is the coin B.}
 \end{align*}
 
-Luckily, in thie example you can calculate the exact log-likelihood ratio for $X_1$ and $X_2$, because you already know the probabilities of being head or tail:
+Luckily, in thie example you can calculate the exact log-likelihood ratio for $X_{1}^{{1, 10}} $ and $X_{2}^{{1, 10}}$ easily, because (i) you already know the probabilities of being head or tail, and (ii) each flipping trial can be handled as independent:
 
-(likelihood calculation)
+\begin{align*}
+    &\ \log \left(
+        \frac{p(X_{1}^(1,10) | y=1)}{p(X_{1}^(1,10)| y=0)} 
+    \right)
+    = \sum_{t=1}^{10} \log \frac{p( x_1^{(t)} | y=1)} {p( x_1^{(t)} | y=0)}
+\begin{align*}
 
 Note that flipping trials are independent. Thus, the first coin is likely to be coin A, while the second coin is coin B.
 
@@ -113,7 +116,7 @@ Here, you are confronting with two problems executing the SPRT. First, unlike th
 ## SPRT-TANDEM for the likelihood estimation
 So what should we do? Here comes the SPRT-TANDEM algorithm. We use two kinds of density ratio estimation algorithms, ratio matching approach, and probabilistic classification approach, to let a deep neural network estimate the likelihood ratio. To control a correlation length that is considered, we propose the TANDEM formula:
 
-\begin{align}
+\begin{align*}
     &\ \log \left(
         \frac{p(x^{(1)},x^{(2)}, ..., x^{(t)}| y=1)}{p(x^{(1)},x^{(2)}, ..., x^{(t)}| y=0)}
     \right)\nonumber \newline
@@ -131,7 +134,7 @@ So what should we do? Here comes the SPRT-TANDEM algorithm. We use two kinds of 
         }
     \right) \nonumber \newline
      & - \log\left( \frac{p(y=1)}{p(y=0)} \right) 
-\end{align}
+\end{align*}
 
 Our proposed neural network is trained to explicitly calculate the TANDEM formula to provide the sequential likelihood ratio estimation. Below is the estimated likelihood trajectories of example 2.
 
