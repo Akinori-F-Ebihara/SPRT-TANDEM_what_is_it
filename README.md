@@ -59,7 +59,14 @@ $\text{Biased coin: } y=1$
 \end{cases}
 \end{gather*}
 
-You do not know which one is the coin A: the true label $y$ of the coins are unknown. Now, you want to experiment with the two coins to make a guess on the labels, assuming that each flipping trial can be considered as independent. Flipping each of them ten times yields the following results.
+You do not know which one is biased: the true label $y$ of the coins are unknown. Now, you want to experiment with the two coins to make a guess on the labels. Thus, the two hypotheses are:  
+
+\begin{align*}
+    &H_0: y=0 \text{   (It is the unbiased coin.)} \newline
+    &H_1: y=1 \text{   (It is the biased coin.)}
+\end{align*}
+
+Flipping each of them ten times yields the following results. Note that we assume each flipping trial is independent.
 
 The first coin:
 \begin{align*}
@@ -71,14 +78,7 @@ The second coin:
     X_{2}^{(1, 10)} = \lbrace x_{head}, x_{tail}, x_{head}, x_{tail}, x_{tail}, x_{head}, x_{head}, x_{tail}, x_{head}, x_{head} \rbrace
 \end{align*}
 
-you have two hypotheses:  
-
-\begin{align*}
-    &H_0: y=0 \text{   (It is the unbiased coin.)} \newline
-    &H_1: y=1 \text{   (It is the biased coin.)}
-\end{align*}
-
-Luckily, in thie example you can calculate the exact log-likelihood ratio for $X_{1}^{{1, 10}} $ and $X_{2}^{{1, 10}}$ easily, because (i) you already know the probabilities of being head or tail, and (ii) each flipping trial can be handled as independent:
+In order to use the SPRT for testing hypotheses, you need to calculate the LLR. Luckily, in this example you can calculate the exact log-likelihood ratio for $X_{1}^{{1, 10}} $ and $X_{2}^{{1, 10}}$ easily, because (i) you already know the probabilities of being head or tail, and (ii) each flipping trial can be handled as independent:
 
 \begin{align*}
   \mathrm{LLR}(X_1^{(1,10)}) 
@@ -135,7 +135,7 @@ $X_2^{(1,6)}$:
 <img src ="./spoof.png">
 </div>
 
-Here, you are confronting with two problems executing the SPRT. First, unlike the coin-flipping example, you do not know the generating probability of the given data. Second, the video frames are highly correlated, and the assumption of the original SPRT no longer holds. These two problems hamper calculating the likelihood ratio.
+The next step is to calculate the LLR to test the hypotheses. But how? Here, you are confronting with two problems executing the SPRT. First, unlike the coin-flipping example, you do not know the generating probability of the given data. Second, the video frames are highly correlated, and the assumption of the original SPRT no longer holds. These two problems, which are partain to real-world scenarios, hamper executing the SPRT.
 
 ## SPRT-TANDEM for the likelihood estimation
 So what should we do? Here comes the SPRT-TANDEM algorithm. We use two kinds of density ratio estimation algorithms, ratio matching approach, and probabilistic classification approach, to let a deep neural network estimate the likelihood ratio. To control a correlation length that is considered, we propose the TANDEM formula:
