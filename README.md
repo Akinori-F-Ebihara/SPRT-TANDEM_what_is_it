@@ -133,9 +133,9 @@ $X_1^{(1,6)}$:
 $X_2^{(1,6)}$:
 <div align="center">
 <img src ="./spoof.png">
-</div>
+</div>  
 
-The next step is to calculate the LLR to test the hypotheses. But how? Here, you are confronting with two problems executing the SPRT. First, unlike the coin-flipping example, you do not know the generating probability of the given data. Second, the video frames are highly correlated, and the assumption of the original SPRT no longer holds. These two problems, which are partain to real-world scenarios, hamper executing the SPRT.
+The next step is to calculate the LLR to test the hypotheses. But how? Here, you are confronting with two problems executing the SPRT. First, unlike the coin-flipping example, you do not know the probability conditioned with a class label (i.e., likelihood) of each sample. Second, the video frames are highly correlated, and the i.i.d. assumption of the original SPRT no longer holds. These two problems, which are partain to real-world scenarios, hamper executing the SPRT.
 
 ## SPRT-TANDEM for the likelihood estimation
 So what should we do? Here comes the SPRT-TANDEM algorithm. We use two kinds of density ratio estimation algorithms, ratio matching approach, and probabilistic classification approach, to let a deep neural network estimate the likelihood ratio. To control a correlation length that is considered, we propose the TANDEM formula:
