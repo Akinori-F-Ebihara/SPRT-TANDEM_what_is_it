@@ -105,7 +105,7 @@ In order to use the SPRT for testing hypotheses, you need to calculate the LLR. 
    := & \log \left(
         \frac{p(X_{1}^{(1,10)} | y=1)}
              {p(X_{1}^{(1,10)} | y=0)} 
-    \right) \\nonumber newline
+    \right) \nonumber \newline
     = & \sum_{t=1}^{10} \log \frac{p( x_2^{(t)} | y=1)} {p( x_2^{(t)} | y=0)} \nonumber \newline
     = & \log \left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log \left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left( \frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) \nonumber \newline
     + &\log\left(\frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{2}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} } \right) + \log\left(\frac{ \frac{1}{3} } { \frac{1}{2} }\right) \nonumber \newline
@@ -127,8 +127,10 @@ Next, let's consider a more realistic application: face spoofing detection. Face
 In this example, you are presented with a series of facial image to choose one of the two hypotheses,  
 
 \begin{align}
+\begin{split}
     &H_0: y=0 \text{   (It is a live face.)} \newline
     &H_1: y=1 \text{   (It is a spoof face.)}
+\begin{end}
 \end{align}
 
 Now let's see an example video. 
