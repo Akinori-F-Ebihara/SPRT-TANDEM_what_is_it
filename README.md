@@ -46,16 +46,16 @@ You have two coins, but one of them is a skewed coin that has uneven probabiliti
 $\text{coin A (unbiased): } y=0$
 \begin{gather*}
 \begin{cases}
-  p(x^{(t)}) = \frac{1}{2} & \text{if } x^{(t)} = x_{head} \newline
-  p(x^{(t)}) = \frac{1}{2} & \text{if } x^{(t)} = x_{tail}
+  p(x^{(t)} | y=0) = \frac{1}{2} & \text{if } x^{(t)} = x_{head} \newline
+  p(x^{(t)} | y=0) = \frac{1}{2} & \text{if } x^{(t)} = x_{tail}
 \end{cases}
 \end{gather*}
 
 $\text{coin B (biased): } y=1$
 \begin{gather*}
 \begin{cases}
-  p(x^{(t)}) = \frac{1}{2} & \text{if } x^{(t)} = x_{head} \newline
-  p(x^{(t)}) = \frac{1}{2} & \text{if } x^{(t)} = x_{tail}
+  p(x^{(t)}| y=1) = \frac{1}{3} & \text{if } x^{(t)} = x_{head} \newline
+  p(x^{(t)}| y=1) = \frac{2}{3} & \text{if } x^{(t)} = x_{tail}
 \end{cases}
 \end{gather*}
 
