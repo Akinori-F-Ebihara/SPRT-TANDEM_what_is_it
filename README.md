@@ -84,7 +84,7 @@ The second coin:
 \end{align}
 
 
-In order to use the SPRT for testing hypotheses, you need to calculate the LLR. Luckily, in this example you can calculate the exact log-likelihood ratio for $X_{1}^{{1, 10}} $ and $X_{2}^{{1, 10}}$ easily, because (i) you already know the probabilities of being head or tail, and (ii) each flipping trial can be handled as independent:
+In order to use the SPRT for testing hypotheses, you need to calculate the LLR. Luckily, in this example you can calculate the exact log-likelihood ratio for $X_{1}^{(1, 10)} $ and $X_{2}^{(1, 10)}$ easily, because (i) you already know the probabilities of being head or tail, and (ii) each flipping trial can be handled as independent:
 
 \begin{align}
   \mathrm{LLR}(X_1^{(1,10)}) 
