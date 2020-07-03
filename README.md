@@ -1,7 +1,7 @@
 # SPRT-TANDEM: what is it?
 
 ## Introduction
-SPRT-TANDEM is a sequential density ratio estimation algorithm originally proposed in the paper, "Deep Neural Networks for the Sequential Probability Ratio Test on Non-i.i.d. Data Series". The SPRT-TANDEM sequentially estimates log-likelihood ratios of two hypotheses, or classes, for fast and accurate sequential data classification. 
+__SPRT-TANDEM__ is a sequential density ratio estimation algorithm originally proposed in the paper, _"Deep Neural Networks for the Sequential Probability Ratio Test on Non-i.i.d. Data Series"_. The __SPRT-TANDEM__ sequentially estimates log-likelihood ratios of two hypotheses, or classes, for fast and accurate sequential data classification. 
 
 The original paper [1] can be found [here:](https://arxiv.org/abs/2006.05587)  
 The tensorflow implementation of the SPRT-TANDEM can be found [here:](https://github.com/TaikiMiyagawa/SPRT-TANDEM)
