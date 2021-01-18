@@ -1,7 +1,7 @@
 # SPRT-TANDEM: what is it?
 
 ## Introduction
-__SPRT-TANDEM__ is a sequential density ratio estimation algorithm originally proposed in the paper, _"Deep Neural Networks for the Sequential Probability Ratio Test on Non-i.i.d. Data Series"_. The __SPRT-TANDEM__ sequentially estimates log-likelihood ratios of two hypotheses, or classes, for fast and accurate sequential data classification. 
+__SPRT-TANDEM__ is a sequential density ratio estimation algorithm originally proposed in the paper, ["Sequential Density Ratio Estimation for Simultaneous Optimization of Speed and Accuracy"](https://openreview.net/forum?id=Rhsu5qD36cL) [ICLR2021 Spotlight]. The __SPRT-TANDEM__ sequentially estimates log-likelihood ratios of two hypotheses, or classes, for fast and accurate sequential data classification. 
 
 The original paper [1] can be found [here:](https://arxiv.org/abs/2006.05587)  
 The tensorflow implementation of the SPRT-TANDEM can be found [here:](https://github.com/TaikiMiyagawa/SPRT-TANDEM)
@@ -187,13 +187,13 @@ The SPRT algorithm makes an early decision for an easy data series, while it tak
 ## Citation
 Please cite the paper if you find our work is useful:
 ```
-@misc{SPRT_TANDEM2020,
-    title={Deep Neural Networks for the Sequential Probability Ratio Test on Non-i.i.d. Data Series},
-    author={Akinori F. Ebihara and Taiki Miyagawa and Kazuyuki Sakurai and Hitoshi Imaoka},
-    year={2020},
-    eprint={2006.05587},
-    archivePrefix={arXiv},
-    primaryClass={cs.LG}
+@inproceedings{
+  ebihara2021sequential,
+  title={Sequential Density Ratio Estimation for Simultaneous Optimization of Speed and Accuracy},
+  author={Akinori F Ebihara and Taiki Miyagawa and Kazuyuki Sakurai and Hitoshi Imaoka},
+  booktitle={International Conference on Learning Representations},
+  year={2021},
+  url={https://openreview.net/forum?id=Rhsu5qD36cL}
 }
 ```
 
