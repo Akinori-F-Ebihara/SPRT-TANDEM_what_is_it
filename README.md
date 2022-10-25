@@ -201,7 +201,7 @@ Please cite the paper if you find our work is useful:
 The author thanks Hirofumi Nakayama and Yoshihiko Ebihara for valuable comments to improve the article.
 
 ## References
-[1] A. F. Ebihara, T. Miyagawa, K. Sakurai, and H. Imaoka. Deep neural networks for the sequential probability ratiotest on non-i.i.d. data series, arXiv, 2020
+[1] A. F. Ebihara, T. Miyagawa, K. Sakurai, and H. Imaoka. Sequential Density Ratio Estimation for Simultaneous Optimization of Speed and Accuracy. arXiv, 2020
 
 [2] S. Kira, T. Yang, and M. N. Shadlen. A neural implementation of wald’s sequential probability rato test. Neuron, 85(4):861–873, Feb. 2015.
 
